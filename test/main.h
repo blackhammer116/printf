@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+int print_hex(int);
 int print_binary(int);
 int print_numb(int);
 int _pow(int, int);
