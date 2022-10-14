@@ -6,7 +6,11 @@
 #include <unistd.h>
 #include <stdio.h>
 
+int print_numb(int);
+int _pow(int, int);
+int pchar(char);
+int _strlen(char *);
+int _printf(const char *, ...);
 
-int _printf(const char *format, ...);
 
 #endif
