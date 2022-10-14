@@ -4,6 +4,7 @@
  * representation.
  * @num: decimal parameter which gets converted into 
  * a binary representation.
+ * Return: the converted numbers in array form
  */
 int print_binary(int num)
 {
