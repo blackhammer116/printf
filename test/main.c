@@ -7,7 +7,9 @@
  */
 int main(void)
 {
-	_printf("Working\n");
-
+	int len;
+	
+	len = _printf("Working %s %c\n", "miki", 'm');
+	printf("%d This is the length of the string\n", len);
 	return (0);
 }
