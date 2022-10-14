@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 {
 	int i, len;
 	va_list list;
-	char c, *hold;
+	char *hold;
 
 	if (format == NULL)
 		return (-1);
@@ -37,20 +37,28 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == 'c')
+			switch (format[i + 1])
 			{
-				c = va_arg(list, int);
-				write(1, &c, 1);
-				len--;
-				i++;
-			}
-			if (format[i + 1] == 's')
-			{
-				hold = va_arg(list, char *);
-				write(1, hold, _strlen(hold));
-				len = len + _strlen(hold) - 1;
-				i++;
-			}
+				case 'c':
+					pchar(va_arg(list, int));
+					len--;
+					i++;
+					break;
+				case 's':
+					hold = va_arg(list, char *);
+					write(1, hold, _strlen(hold));
+					len = len + _strlen(hold) - 1;
+					i++;
+					break;
+			
+				case 'd':
+					len = len + print_numb(va_arg(list, int)) - 1;
+					i++;
+					break;
+				default:
+					pchar(va_arg(list, int));
+			}		
+
 		}
 		else
 		{

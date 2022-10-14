@@ -40,6 +40,11 @@ int print_numb(int numb)
 	list = malloc(sizeof(int) * 10);
 	if (list == NULL)
 		return (1);
+	if (numb < 0)
+	{
+		pchar('-');
+		numb = numb * -1;
+	}
 	for (i = 1, j = 0; ; i++, j++)
 	{
 		if (numb / _pow(10, i) == 0)
@@ -49,11 +54,9 @@ int print_numb(int numb)
 		}
 		list[j] = (numb % _pow(10, i)) / _pow(10, j);
 	}
-	if (numb < 0)
-		pchar('-');
 	for (; j > -1; j--)
 		pchar(list[j] + '0');
 	free(list);
-	return (0);
+	return (i);
 }
 
