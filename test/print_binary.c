@@ -8,23 +8,22 @@
  */
 int print_binary(int num)
 {
-	int i, temp, j = 0;
+	int i, temp, j;
 	int arr[10000], arr2[10000];
 	int qot;
+
 	qot = num / 2;
-	for (i = 0; qot != 0; i++)
+	for (i = 0, j = 0; qot != 0; i++, j++)
 	{
 		qot = num / 2;
 		arr[j] = num % 2;
 		num = qot;
-		j++;
 	}
-	i = 0;
-	for (j; j > 0; j--)
+	for (; j > -1; j--)
 	{
-		temp = arr[j];
-		arr2[i] = temp;
-		i++;
+		if (j == i)
+			j--;
+		pchar(arr[j] + '0');
 	}
-	return (arr2);
+	return (i);
 }
