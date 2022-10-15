@@ -5,6 +5,9 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdio.h>
+
+int _strlen(char *);
+void rev_string(char *);
 int print_hex(int);
 int print_binary(int);
 int print_numb(int);

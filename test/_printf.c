@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * _strlen - measures the length of a string.
- * @str: The string to be measured.
- *
- * Return: The length of the string on success
- * on error -1.
- */
-int _strlen(char *str)
-{
-	int i;
-
-	if (str == NULL)
-		return (-1);
-	for (i = 0; str[i] != '\0'; i++)
-		i = i;
-	return (i);
-}
-/**
  * pass_it - checks and pass an identifier to the wirte
  * function.
  * @c: The identifier to be checked.
