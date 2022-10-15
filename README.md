@@ -6,10 +6,11 @@
 ## Usage
 - prototype: int _printf(const char *format, ...);
 - return: the legnth of the chars printed.
-
-- _printf("something to be printed %d", 10);
+```
+_printf("something to be printed %d", 10);
 output:
-- something to be printed 10
+something to be printed 10
+````
 supported identifiers:
 	* %d: to print decimal number.
 	* %x: to print hexadecimal number.
