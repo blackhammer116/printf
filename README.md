@@ -11,14 +11,14 @@ _printf("something to be printed %d", 10);
 output:
 something to be printed 10
 ````
-supported identifiers:
-	* %d: to print decimal number.
-	* %x: to print hexadecimal number.
-		* decimal to hex supported.
-	* %b: to print binary.
-		*decimal to binary supported.
-	* %s: to print string.
-	* %c: to print character.
+supported identifiers:</br>
+- %d: to print decimal number.
+- %x: to print hexadecimal number.
+	* decimal to hex supported.
+- %b: to print binary.
+	* decimal to binary supported.
+- %s: to print string.
+- %c: to print character.
 compilation:
 - gcc printf/*.c {your c files and main file}.c
 
