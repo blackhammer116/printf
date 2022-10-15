@@ -19,7 +19,8 @@ supported identifiers:</br>
 	* decimal to binary supported.
 - %s: to print string.
 - %c: to print character.</br>
-compilation:</br>
+
+Compilation: 
 - gcc printf/*.c {your c files and main file}.c
 
 ## Authors
