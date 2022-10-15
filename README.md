@@ -1,5 +1,5 @@
 # The standard like printf function.
-* A project for a programe <a href=https://www.alxafrica.com/programme_post/full-stack-software-engineer/>@alx_se_programme</a> on how printf work and building on with a group of two.
+* A project for a programe <a href=https://www.alxafrica.com/programme_post/full-stack-software-engineer/>@alx_se_programme</a> on how printf work and building one with a group of two.
 
 ## What does printf do?
  - printf is a function that is used to perform formated printing in C language with some cool features like <a href=https://en.wikipedia.org/wiki/Printf_format_string> formated printing</a>
@@ -18,8 +18,8 @@ supported identifiers:</br>
 - %b: to print binary.
 	* decimal to binary supported.
 - %s: to print string.
-- %c: to print character.
-compilation:
+- %c: to print character.</br>
+compilation:</br>
 - gcc printf/*.c {your c files and main file}.c
 
 ## Authors
