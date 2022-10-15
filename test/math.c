@@ -56,7 +56,7 @@ int print_numb(int numb)
 /**
  * print_binary - converts a givin decimal number into binary
  * representation.
- * @num: decimal parameter which gets converted into 
+ * @num: decimal parameter which gets converted into
  * a binary representation.
  * Return: the converted numbers in array form
  */
@@ -79,5 +79,29 @@ int print_binary(int num)
 			j--;
 		pchar(arr[j] + '0');
 	}
+	return (i);
+}
+
+/**
+ * print_hex - convertes decimal numbers into hexadecimal
+ *  numbers.
+ *  @num: number to be converted
+ *  Return: to converted number in array form
+ */
+int print_hex(int num)
+{
+	int i, qot, j, arr[10000];
+	char *arr2;
+
+	qot = num / 16;
+	for (i = 0; qot != 0; i++)
+	{
+		qot = num / 16;
+		arr[i] = num % 16;
+		num = qot;
+	}
+	arr2 = convert_to_letter(arr, i);
+	_printf("%s", arr2);
+
 	return (i);
 }
