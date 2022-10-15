@@ -55,10 +55,11 @@ int print_numb(int numb)
 
 /**
  * print_binary - converts a givin decimal number into binary
- * representation.
+ * representation and print it.
  * @num: decimal parameter which gets converted into
  * a binary representation.
- * Return: the converted numbers in array form
+ *
+ * Return: The lenght of the printed character.
  */
 int print_binary(int num)
 {
@@ -84,9 +85,10 @@ int print_binary(int num)
 
 /**
  * print_hex - convertes decimal numbers into hexadecimal
- *  numbers.
+ *  numbers  and print it.
  *  @num: number to be converted
- *  Return: to converted number in array form
+ *
+ *  Return: length of the printed characters.
  */
 int print_hex(int num)
 {
@@ -101,7 +103,7 @@ int print_hex(int num)
 		num = qot;
 	}
 	arr2 = convert_to_letter(arr, i);
-	_printf("%s", arr2);
-
+	for (j = 1; j <= i; j++)
+		pchar(arr2[j]);
 	return (i);
 }

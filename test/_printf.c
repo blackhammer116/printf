@@ -21,7 +21,6 @@ int pass_it(char c, int *cnt, int *len, va_list list)
 	{
 		case 'c':
 			pchar(va_arg(list, int));
-			len_--;
 			cnt_++;
 			break;
 		case 's':
@@ -36,6 +35,10 @@ int pass_it(char c, int *cnt, int *len, va_list list)
 			break;
 		case 'b':
 			len_ = len_ + print_binary(va_arg(list, int)) - 1;
+			cnt_++;
+			break;
+		case 'x':
+			len_ = len_ + print_hex(va_arg(list, int)) -1;
 			cnt_++;
 			break;
 		default:

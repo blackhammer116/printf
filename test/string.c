@@ -75,17 +75,17 @@ char *convert_to_letter(int *arr, int len)
 	for (i = 0; i <= len; i++)
 	{
 		if (arr[i] == 10)
-			p[i] = 'A';
+			p[i] = 'a';
 		else if (arr[i] == 11)
-			p[i] = 'B';
+			p[i] = 'b';
 		else if (arr[i] == 12)
-			p[i] = 'C';
+			p[i] = 'c';
 		else if (arr[i] == 13)
-			p[i] = 'D';
+			p[i] = 'd';
 		else if (arr[i] == 14)
-			p[i] = 'E';
+			p[i] = 'e';
 		else if (arr[i] == 15)
-			p[i] = 'F';
+			p[i] = 'f';
 		else
 			p[i] = (arr[i] + '0');
 	}

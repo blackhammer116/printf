@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
+char *convert_to_letter(int *, int);
 int _strlen(char *);
 void rev_string(char *);
 int print_hex(int);
