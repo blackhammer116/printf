@@ -107,3 +107,27 @@ int print_hex(int num)
 		pchar(arr2[j]);
 	return (i);
 }
+/**
+ * print_octal - convertes unsigned decimal number into an oc
+ * tal representation
+ * @num: unsigned in parameter
+ * return: i
+ */
+int print_octal(unsigned int num)
+{
+	int i, qot, j, arr[10000];
+	char *arr2;
+
+	qot = num / 8;
+	for (i = 0, qot != 0; i++)
+	{
+		qot = num / 8;
+		arr[i] = num % 8;
+		num = qot;
+	}
+	for (j = 1; j <= i; j++)
+	{
+		pchar(arr2[j]);
+	}
+	return (i);
+}
