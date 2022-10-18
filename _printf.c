@@ -13,7 +13,7 @@
 int pass_it(char c, int *cnt, int *len, va_list list)
 {
 	char *hold;
-	int cnt_, len_;
+  	unsigned int cnt_, len_;
 
 	cnt_ = *cnt;
 	len_ = *len;
