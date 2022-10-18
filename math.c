@@ -64,7 +64,7 @@ int print_numb(int numb)
 int print_binary(int num)
 {
 	int i, j;
-	int arr[10000]; /*arr2[10000]*/
+	unsigned int arr[10000]; /*arr2[10000]*/
 	int qot;
 
 	qot = num / 2;
