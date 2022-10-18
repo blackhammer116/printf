@@ -63,8 +63,8 @@ int print_numb(int numb)
  */
 int print_binary(int num)
 {
-	int i, temp, j;
-	int arr[10000], arr2[10000];
+	int i, j;
+	int arr[10000]; /*arr2[10000]*/
 	int qot;
 
 	qot = num / 2;
@@ -108,26 +108,59 @@ int print_hex(int num)
 	return (i);
 }
 /**
- * print_octal - convertes unsigned decimal number into an oc
- * tal representation
- * @num: unsigned in parameter
- * return: i
+ *
  */
-int print_octal(unsigned int num)
+int print_hex_upper(int num)
 {
 	int i, qot, j, arr[10000];
 	char *arr2;
 
-	qot = num / 8;
-	for (i = 0, qot != 0; i++)
+	qot = num / 16;
+	for (i = 0; qot != 0; i++)
 	{
-		qot = num / 8;
-		arr[i] = num % 8;
+		qot = num / 16;
+		arr[i] = num % 16;
 		num = qot;
 	}
-	for (j = 1; j <= i; j++)
-	{
+	arr2 = convert_to_letter_upper(arr, i);
+	for (j = 1; j<= i; j++)
 		pchar(arr2[j]);
-	}
 	return (i);
+}
+/**
+ * print_octal - convertes decimal number into an oc
+ * tal representation
+ * @num: unsigned in parameter
+ * return: i
+ */
+int print_octal(int num)
+{
+	int i, qot, j = 0, c/*, temp*/, arr[10000];
+	char *arr2;
+
+	if (num > 8)
+	{
+		qot = num / 8;
+		for (i = 0; qot != 0; i++)
+		{
+			qot = num / 8;
+			arr[i] = num % 8;
+			num = qot;
+		}
+		c = i;
+		/**
+		for (i; i > -1; i--)
+		{
+			temp = arr[i];
+			arr2[j] = temp;
+			j++;
+		}*/
+		arr2 = convert_to_letter(arr, i);
+		for (j = 1; j <= c; j++)
+		{
+			pchar(arr2[j]);
+		}
+		return (i);
+	}
+	return (num);
 }

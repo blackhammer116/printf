@@ -92,3 +92,40 @@ char *convert_to_letter(int *arr, int len)
 	rev_string(p);
 	return (p);
 }
+/**
+ * convert_to_letter_upper - does the same thing as the
+ * function convert_to_letter but in an upper case
+ * @arr: array to be converted into a letter
+ * @len: len parameter
+ * Return: the sorrted converted letters
+ */
+char *convert_to_letter_upper(int *arr, int len)
+{
+	int i;
+	char *p;
+
+	if (arr == NULL || len == 0)
+		return (NULL);
+	p = malloc(sizeof(char) * len);
+	if (p == NULL)
+		return (NULL);
+	for (i = 0; i <= len; i++)
+	{
+		if (arr[i] == 10)
+			p[i] = 'A';
+		else if (arr[i] == 11)
+			p[i] = 'B';
+		else if (arr[i] == 12)
+			p[i] = 'C';
+		else if (arr[i] == 13)
+			p[i] = 'D';
+		else if (arr[i] == 14)
+			p[i] = 'E';
+		else if (arr[i] == 15)
+			p[i] = 'F';
+		else
+			p[i] = (arr[i] + '0');
+	}
+	rev_string(p);
+	return (p);
+}

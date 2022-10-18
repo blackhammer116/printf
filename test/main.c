@@ -9,7 +9,7 @@ int main(void)
 {
 	int len;
 
-	len = _printf("miki %c %d %s", 'c', 11, "ls ls\n");
+	len = _printf("the char %c the decimal %b the string %s the octal %o \n the hex %x\n the upper hex asbduabs", 'c', 11, "ls ls ", 23, 950);
 	_printf("%d\n", len);
 	
 	return (0);

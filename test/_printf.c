@@ -41,6 +41,14 @@ int pass_it(char c, int *cnt, int *len, va_list list)
 			len_ = len_ + print_hex(va_arg(list, int)) -1;
 			cnt_++;
 			break;
+		case 'X':
+			len_ = len_ + print_hex_upper(va_arg(list, int)) -1;
+			cnt_++;
+			break;
+		case 'o':
+			len_ = len_ + print_octal(va_arg(list, int)) -1;
+			cnt_++;
+			break;
 		default:
 			pchar(va_arg(list, int));
 	}
