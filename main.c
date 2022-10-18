@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - code tester.
  * 
@@ -8,8 +8,9 @@
 int main(void)
 {
 	/*int len;*/
-
-	/*len =*/ _printf("the char %c the decimal %b the string %s the octal %o \n the hex %x\n the upper hex asbduabs", 'c', 11, "ls ls ", 23, 950);
+	unsigned int num = 2147484671;
+	printf("%u\n", num);
+	_printf("%u",214748461);
 	/*_printf("%d\n", len);*/
 	
 	return (0);

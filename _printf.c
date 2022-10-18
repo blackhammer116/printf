@@ -49,6 +49,10 @@ int pass_it(char c, int *cnt, int *len, va_list list)
 			len_ = len_ + print_octal(va_arg(list, int)) -1;
 			cnt_++;
 			break;
+		case 'u':
+			len_ = len_ + print_unsigned_numb(va_arg(list, unsigned int)) -1;
+			cnt_++;
+			break;
 		default:
 			pchar(va_arg(list, int));
 	}

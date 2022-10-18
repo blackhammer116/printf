@@ -28,7 +28,7 @@ int print_numb(int numb)
 	int i, j, ret, *list;
 
 	ret = 0;
-	list = malloc(sizeof(int) * 10);
+	list = malloc(sizeof(unsigned long int) * 10);
 	if (list == NULL)
 		return (1);
 	if (numb < 0)
@@ -52,6 +52,41 @@ int print_numb(int numb)
 	free(list);
 	return (ret);
 }
+/**
+ * print_unsigned_numb - prints unsigned decimal number
+ * @numb: unsigned it to be printed
+ * Return: ret
+ */
+unsigned int print_unsigned_numb(unsigned int numb)
+{
+	int i, j;
+	unsigned int ret;
+	unsigned int *list;
+
+	ret = 0;
+	list = malloc(sizeof(unsigned long int) * 10);
+	if (list == NULL)
+		return (1);
+	/**
+	if (numb < 0)
+	{
+		pchar('-');
+		ret = 1;
+		numb *= -1;
+	}*/
+	for (i = 1, j = 0; ; i++, j++)
+	{
+		if (numb / _pow(10, i) == 0)
+		{
+			list[j] = numb / _pow(10, j);
+		}
+	}
+	for (; j > -1; j--)
+		pchar(list[j] + '0');
+	ret = ret + i;
+	free(list);
+	return (ret);
+}
 
 /**
  * print_binary - converts a givin decimal number into binary
@@ -61,7 +96,7 @@ int print_numb(int numb)
  *
  * Return: The lenght of the printed character.
  */
-int print_binary(int num)
+int print_binary(unsigned int num)
 {
 	int i, j;
 	unsigned int arr[10000]; /*arr2[10000]*/
